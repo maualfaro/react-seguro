@@ -1,0 +1,38 @@
+{
+  "node": {
+    "00439e8a115bb87825fc26e118195193bc493a0444": {
+      "workers": {
+        "app/solicitudes/[id]/page": {
+          "moduleId": 90693,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "exportedName": "cerrarSesion",
+      "filename": "src/app/logout/actions.ts"
+    },
+    "408f23ebf6ed9074c36ea45821280e14e52c256867": {
+      "workers": {
+        "app/solicitudes/[id]/page": {
+          "moduleId": 90693,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "exportedName": "aprobarSolicitud",
+      "filename": "src/app/solicitudes/actions.ts"
+    },
+    "40ddb8fa8a39396d9571ceea8abc0693d7e43a366d": {
+      "workers": {
+        "app/solicitudes/[id]/page": {
+          "moduleId": 90693,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "exportedName": "rechazarSolicitud",
+      "filename": "src/app/solicitudes/actions.ts"
+    }
+  },
+  "edge": {}
+}

@@ -1,0 +1,27 @@
+{
+  "node": {
+    "00439e8a115bb87825fc26e118195193bc493a0444": {
+      "workers": {
+        "app/solicitudes/page": {
+          "moduleId": 47177,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "exportedName": "cerrarSesion",
+      "filename": "src/app/logout/actions.ts"
+    },
+    "40aafb9e0e68336cc8a13b8470710e20ea4fb8ecaf": {
+      "workers": {
+        "app/solicitudes/page": {
+          "moduleId": 47177,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "exportedName": "crearSolicitud",
+      "filename": "src/app/solicitudes/actions.ts"
+    }
+  },
+  "edge": {}
+}

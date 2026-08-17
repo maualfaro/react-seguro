@@ -1,0 +1,3 @@
+module.exports=[23953,a=>{"use strict";var b=a.i(87924);a.s(["default",0,function({reset:a}){return(0,b.jsxs)("div",{className:"contenedor estado",role:"alert",children:[(0,b.jsx)("h1",{children:"No pudimos completar la operación"}),(0,b.jsx)("p",{children:"Intente de nuevo. Si el problema persiste, comuníquese con soporte e indique la hora exacta."}),(0,b.jsx)("button",{className:"btn",onClick:a,children:"Reintentar"})]})}])}];
+
+//# sourceMappingURL=src_app_error_tsx_0ac07bj._.js.map

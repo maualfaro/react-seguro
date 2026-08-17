@@ -1,0 +1,16 @@
+{
+  "node": {
+    "60e1a9844ea4da5e1393d46481dd8623a4afdd4f22": {
+      "workers": {
+        "app/login/page": {
+          "moduleId": 40246,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "exportedName": "iniciarSesion",
+      "filename": "src/app/login/actions.ts"
+    }
+  },
+  "edge": {}
+}

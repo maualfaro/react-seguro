@@ -1,0 +1,27 @@
+1:"$Sreact.fragment"
+2:I[47257,["/_next/static/chunks/3fntmmi971322.js"],"ClientPageRoot"]
+3:I[94542,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/3rcb-5rv-uq_b.js"],"default"]
+6:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+b:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"ViewportBoundary"]
+c:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"MetadataBoundary"]
+e:I[39756,["/_next/static/chunks/3fntmmi971322.js"],"default"]
+f:I[37457,["/_next/static/chunks/3fntmmi971322.js"],"default"]
+12:I[58298,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/2xmnbfil83qtj.js"],"default"]
+13:I[22016,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/22i43cg4l4-dq.js"],""]
+:HL["/_next/static/chunks/21nd09hdfd8qg.css","style"]
+a:X
+11:X
+11:C
+0:{"buildId":"EkOilnw8lUyk-9OOJGBTj","data":[{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/_next/static/chunks/3rcb-5rv-uq_b.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":"$@9","staleTime":"$a","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$Lb",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$Lc",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Bóveda — Portal de operaciones"}],["$","meta","1",{"name":"description","content":"Proyecto de referencia del curso SOFT-750"}]]}]}]}],null]}],"isPartial":"$@d","staleTime":"$a","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Le",null,{"parallelRouterKey":"children","template":["$","$Lf",null,{}]}]]}],"isPartial":"$@10","staleTime":"$a","varyParams":"$11"},{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/21nd09hdfd8qg.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/3fntmmi971322.js","async":true}]],["$","html",null,{"lang":"es","children":["$","body",null,{"children":["$","$Le",null,{"parallelRouterKey":"children","error":"$12","errorStyles":[],"errorScripts":[["$","script","script-0",{"src":"/_next/static/chunks/2xmnbfil83qtj.js","async":true}]],"template":["$","$Lf",null,{}],"notFound":[["$","div",null,{"className":"contenedor estado","children":[["$","h1",null,{"children":"No encontrado"}],["$","p",null,{"children":"El recurso no existe o no está disponible para su usuario."}],["$","$L13",null,{"className":"btn","href":"/solicitudes","children":"Volver a solicitudes"}]]}],[]]}]}]}]]}],"isPartial":"$@14","staleTime":"$a","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@15","rootVaryParams":null,"needsRuntimeRequest":"$@16"}
+4:{}
+5:"$0:data:0:rsc:props:children:0:props:serverProvidedParams:params"
+8:null
+a:300
+16:true
+a:C
+15:0
+d:"$undefined"
+10:"$undefined"
+14:"$undefined"
+9:"$undefined"

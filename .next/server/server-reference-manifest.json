@@ -1,0 +1,71 @@
+{
+  "node": {
+    "00439e8a115bb87825fc26e118195193bc493a0444": {
+      "workers": {
+        "app/auditoria/page": {
+          "moduleId": 57896,
+          "async": false,
+          "codeHash": null
+        },
+        "app/solicitudes/[id]/page": {
+          "moduleId": 90693,
+          "async": false,
+          "codeHash": null
+        },
+        "app/solicitudes/page": {
+          "moduleId": 47177,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/logout/actions.ts",
+      "exportedName": "cerrarSesion"
+    },
+    "60e1a9844ea4da5e1393d46481dd8623a4afdd4f22": {
+      "workers": {
+        "app/login/page": {
+          "moduleId": 40246,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/login/actions.ts",
+      "exportedName": "iniciarSesion"
+    },
+    "40aafb9e0e68336cc8a13b8470710e20ea4fb8ecaf": {
+      "workers": {
+        "app/solicitudes/page": {
+          "moduleId": 47177,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/solicitudes/actions.ts",
+      "exportedName": "crearSolicitud"
+    },
+    "408f23ebf6ed9074c36ea45821280e14e52c256867": {
+      "workers": {
+        "app/solicitudes/[id]/page": {
+          "moduleId": 90693,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/solicitudes/actions.ts",
+      "exportedName": "aprobarSolicitud"
+    },
+    "40ddb8fa8a39396d9571ceea8abc0693d7e43a366d": {
+      "workers": {
+        "app/solicitudes/[id]/page": {
+          "moduleId": 90693,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/solicitudes/actions.ts",
+      "exportedName": "rechazarSolicitud"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "BMDyZAx6LWE0Rmgbf2vdhUpGehj46fcZIersZ6hJhcc="
+}

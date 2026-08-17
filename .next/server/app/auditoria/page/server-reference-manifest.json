@@ -1,0 +1,16 @@
+{
+  "node": {
+    "00439e8a115bb87825fc26e118195193bc493a0444": {
+      "workers": {
+        "app/auditoria/page": {
+          "moduleId": 57896,
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "exportedName": "cerrarSesion",
+      "filename": "src/app/logout/actions.ts"
+    }
+  },
+  "edge": {}
+}

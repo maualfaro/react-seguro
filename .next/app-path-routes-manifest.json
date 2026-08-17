@@ -1,0 +1,10 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/auditoria/page": "/auditoria",
+  "/login/page": "/login",
+  "/no-autorizado/page": "/no-autorizado",
+  "/page": "/",
+  "/solicitudes/[id]/page": "/solicitudes/[id]",
+  "/solicitudes/page": "/solicitudes"
+}
