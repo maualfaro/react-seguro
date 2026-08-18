@@ -1,0 +1,27 @@
+{
+  "node": {
+    "00c36003801d2d350d884d17e193c51654595a7fb2": {
+      "workers": {
+        "app/solicitudes/page": {
+          "moduleId": "[project]/.next-internal/server/app/solicitudes/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/logout/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/solicitudes/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "exportedName": "cerrarSesion",
+      "filename": "src/app/logout/actions.ts"
+    },
+    "40d222a144c897780315264f890ce7fd5edf090d91": {
+      "workers": {
+        "app/solicitudes/page": {
+          "moduleId": "[project]/.next-internal/server/app/solicitudes/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/logout/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/solicitudes/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "exportedName": "crearSolicitud",
+      "filename": "src/app/solicitudes/actions.ts"
+    }
+  },
+  "edge": {}
+}
