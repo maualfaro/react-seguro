@@ -15,3 +15,46 @@ function probar(titulo: string, fn: (e: string) => Resultado) {
     console.log((r.permitido ? '  PASA  ' : 'BLOQUEA ') + d.padEnd(42) + (r.permitido ? '' : '<- ' + r.motivo));
   }
 }
+
+function esHostInterno(host: string): boolean {
+  if (host === 'localhost' || host.endsWith('.localhost')) return true;
+
+  // IPv4 literal
+  const m = host.match(/^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/);
+
+  if (m) {
+    const [a, b] = [Number(m[1]), Number(m[2])];
+
+    if (a === 127) return true; // loopback
+    if (a === 10) return true; // privado
+    if (a === 192 && b === 168) return true; // privado
+    if (a === 172 && b >= 16 && b <= 31) return true; // privado
+    if (a === 169 && b === 254) return true; // link-local
+    if (a === 0) return true;
+  }
+
+  if (host === '::1' || host === '[::1]') return true;
+
+  return false;
+}
+
+const HOSTS_PERMITIDOS = new Set([
+  'api.banco.cr',
+  'core.banco.cr',
+  '10.0.1.50',        // agregado para el tablero
+  'metrics.interno',  // agregado para las metricas
+]);
+
+probar('IT.4  allowlist exacta + solo https', (e) => {
+  let url: URL;
+  try { url = new URL(e); } catch { return { permitido: false, motivo: 'URL invalida' }; }
+  if (url.protocol !== 'https:') return { permitido: false, motivo: 'Solo se permite https' };
+  if (esHostInterno(url.hostname)) {
+  return {
+    permitido: false,
+    motivo: 'Destino interno no permitido',
+  };
+}
+  if (!HOSTS_PERMITIDOS.has(url.hostname)) return { permitido: false, motivo: 'Host no esta en la allowlist' };
+  return { permitido: true, url };
+});

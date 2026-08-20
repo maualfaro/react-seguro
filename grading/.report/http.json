@@ -1,0 +1,32 @@
+[
+  {
+    "id": "login_disponible",
+    "criterio": "c1",
+    "ok": false,
+    "detalle": "sin conexión: fetch failed"
+  },
+  {
+    "id": "ruta_protegida_redirige",
+    "criterio": "c2",
+    "ok": false,
+    "detalle": "fetch failed"
+  },
+  {
+    "id": "auditoria_protegida",
+    "criterio": "c2",
+    "ok": false,
+    "detalle": "fetch failed"
+  },
+  {
+    "id": "estado_403_existe",
+    "criterio": "c3",
+    "ok": false,
+    "detalle": "fetch failed"
+  },
+  {
+    "id": "cabeceras",
+    "criterio": "c4",
+    "ok": false,
+    "detalle": "fetch failed"
+  }
+]

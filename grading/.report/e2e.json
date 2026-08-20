@@ -1,0 +1,878 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "/Users/114140815/Documents/React Segundo/react-seguro/node_modules/.bin/playwright",
+      "test",
+      "--config",
+      "grading/playwright.grading.config.ts"
+    ],
+    "configFile": "/Users/114140815/Documents/React Segundo/react-seguro/grading/playwright.grading.config.ts",
+    "rootDir": "/Users/114140815/Documents/React Segundo/react-seguro/grading",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/114140815/Documents/React Segundo/react-seguro/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/114140815/Documents/React Segundo/react-seguro/grading",
+        "testIgnore": [],
+        "testMatch": [
+          "acceptance.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": ".report/e2e.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "acceptance.spec.ts",
+      "file": "acceptance.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Criterio 1 — flujo de autenticación",
+          "file": "acceptance.spec.ts",
+          "line": 15,
+          "column": 6,
+          "specs": [
+            {
+              "title": "[c1] login válido crea sesión con cookie httpOnly",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1072,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n\n    at login (/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:8:14)\n    at /Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:17:11",
+                        "location": {
+                          "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                          "column": 14,
+                          "line": 8
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  6 |\u001b[39m\n \u001b[90m  7 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m login(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m u\u001b[33m:\u001b[39m { usuario\u001b[33m:\u001b[39m string\u001b[33m;\u001b[39m contrasena\u001b[33m:\u001b[39m string }) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/usuario/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39musuario)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/contraseña/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39mcontrasena)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/ingresar/i\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                            "column": 14,
+                            "line": 8
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m  6 |\u001b[39m\n \u001b[90m  7 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m login(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m u\u001b[33m:\u001b[39m { usuario\u001b[33m:\u001b[39m string\u001b[33m;\u001b[39m contrasena\u001b[33m:\u001b[39m string }) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/usuario/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39musuario)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/contraseña/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39mcontrasena)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/ingresar/i\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at login (/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:8:14)\u001b[22m\n\u001b[2m    at /Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:17:11\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-20T01:51:09.159Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/114140815/Documents/React Segundo/react-seguro/test-results/acceptance-Criterio-1-—-fl-55010--sesión-con-cookie-httpOnly-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                        "column": 14,
+                        "line": 8
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "6bf654160f377cf56a60-1210d305e43223c4a087",
+              "file": "acceptance.spec.ts",
+              "line": 16,
+              "column": 3
+            },
+            {
+              "title": "[c1] credenciales inválidas no autentican y dan mensaje uniforme",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1086,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n\n    at /Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:25:16",
+                        "location": {
+                          "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                          "column": 16,
+                          "line": 25
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 23 |\u001b[39m\n \u001b[90m 24 |\u001b[39m   test(\u001b[32m'[c1] credenciales inválidas no autentican y dan mensaje uniforme'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/usuario/i\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[33mUSUARIOS\u001b[39m\u001b[33m.\u001b[39manalistaA\u001b[33m.\u001b[39musuario)\u001b[33m;\u001b[39m\n \u001b[90m 27 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/contraseña/i\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'incorrecta-xyz'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/ingresar/i\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                            "column": 16,
+                            "line": 25
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 23 |\u001b[39m\n \u001b[90m 24 |\u001b[39m   test(\u001b[32m'[c1] credenciales inválidas no autentican y dan mensaje uniforme'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/usuario/i\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[33mUSUARIOS\u001b[39m\u001b[33m.\u001b[39manalistaA\u001b[33m.\u001b[39musuario)\u001b[33m;\u001b[39m\n \u001b[90m 27 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/contraseña/i\u001b[39m)\u001b[33m.\u001b[39mfill(\u001b[32m'incorrecta-xyz'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/ingresar/i\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:25:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-20T01:51:10.508Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/114140815/Documents/React Segundo/react-seguro/test-results/acceptance-Criterio-1-—-fl-4aa11-ican-y-dan-mensaje-uniforme-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                        "column": 16,
+                        "line": 25
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "6bf654160f377cf56a60-e291ecb80ebe039f43be",
+              "file": "acceptance.spec.ts",
+              "line": 24,
+              "column": 3
+            },
+            {
+              "title": "[c1] logout invalida la sesión",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1091,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n\n    at login (/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:8:14)\n    at /Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:34:11",
+                        "location": {
+                          "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                          "column": 14,
+                          "line": 8
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  6 |\u001b[39m\n \u001b[90m  7 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m login(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m u\u001b[33m:\u001b[39m { usuario\u001b[33m:\u001b[39m string\u001b[33m;\u001b[39m contrasena\u001b[33m:\u001b[39m string }) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/usuario/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39musuario)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/contraseña/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39mcontrasena)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/ingresar/i\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                            "column": 14,
+                            "line": 8
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m  6 |\u001b[39m\n \u001b[90m  7 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m login(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m u\u001b[33m:\u001b[39m { usuario\u001b[33m:\u001b[39m string\u001b[33m;\u001b[39m contrasena\u001b[33m:\u001b[39m string }) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/usuario/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39musuario)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/contraseña/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39mcontrasena)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/ingresar/i\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at login (/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:8:14)\u001b[22m\n\u001b[2m    at /Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:34:11\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-20T01:51:11.877Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/114140815/Documents/React Segundo/react-seguro/test-results/acceptance-Criterio-1-—-fl-84ea1-1-logout-invalida-la-sesión-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                        "column": 14,
+                        "line": 8
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "6bf654160f377cf56a60-a24aa50645243255e6bc",
+              "file": "acceptance.spec.ts",
+              "line": 33,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Criterio 2 — rutas privadas y validación por rol",
+          "file": "acceptance.spec.ts",
+          "line": 42,
+          "column": 6,
+          "specs": [
+            {
+              "title": "[c2] ruta protegida sin sesión redirige a login",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1095,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/solicitudes\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/solicitudes\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/solicitudes\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/solicitudes\", waiting until \"load\"\u001b[22m\n\n    at /Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:44:16",
+                        "location": {
+                          "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                          "column": 16,
+                          "line": 44
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 42 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Criterio 2 — rutas privadas y validación por rol'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 43 |\u001b[39m   test(\u001b[32m'[c2] ruta protegida sin sesión redirige a login'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/solicitudes'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/\\/login/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 46 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 47 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                            "column": 16,
+                            "line": 44
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/solicitudes\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/solicitudes\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 42 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Criterio 2 — rutas privadas y validación por rol'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 43 |\u001b[39m   test(\u001b[32m'[c2] ruta protegida sin sesión redirige a login'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/solicitudes'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/\\/login/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 46 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 47 |\u001b[39m\u001b[0m\n\u001b[2m    at /Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:44:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-20T01:51:13.260Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/114140815/Documents/React Segundo/react-seguro/test-results/acceptance-Criterio-2-—-ru-dc3f4-sin-sesión-redirige-a-login-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                        "column": 16,
+                        "line": 44
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "6bf654160f377cf56a60-5a338ae8badaaa8a70cd",
+              "file": "acceptance.spec.ts",
+              "line": 43,
+              "column": 3
+            },
+            {
+              "title": "[c2] el auditor accede a la bitácora",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1081,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n\n    at login (/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:8:14)\n    at /Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:49:11",
+                        "location": {
+                          "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                          "column": 14,
+                          "line": 8
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  6 |\u001b[39m\n \u001b[90m  7 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m login(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m u\u001b[33m:\u001b[39m { usuario\u001b[33m:\u001b[39m string\u001b[33m;\u001b[39m contrasena\u001b[33m:\u001b[39m string }) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/usuario/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39musuario)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/contraseña/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39mcontrasena)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/ingresar/i\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                            "column": 14,
+                            "line": 8
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m  6 |\u001b[39m\n \u001b[90m  7 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m login(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m u\u001b[33m:\u001b[39m { usuario\u001b[33m:\u001b[39m string\u001b[33m;\u001b[39m contrasena\u001b[33m:\u001b[39m string }) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/usuario/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39musuario)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/contraseña/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39mcontrasena)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/ingresar/i\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at login (/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:8:14)\u001b[22m\n\u001b[2m    at /Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:49:11\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-20T01:51:14.641Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/114140815/Documents/React Segundo/react-seguro/test-results/acceptance-Criterio-2-—-ru-dd492-uditor-accede-a-la-bitácora-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                        "column": 14,
+                        "line": 8
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "6bf654160f377cf56a60-8b2212ed010d37692318",
+              "file": "acceptance.spec.ts",
+              "line": 48,
+              "column": 3
+            },
+            {
+              "title": "[c2] un analista NO accede a la bitácora",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1096,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n\n    at login (/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:8:14)\n    at /Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:55:11",
+                        "location": {
+                          "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                          "column": 14,
+                          "line": 8
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  6 |\u001b[39m\n \u001b[90m  7 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m login(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m u\u001b[33m:\u001b[39m { usuario\u001b[33m:\u001b[39m string\u001b[33m;\u001b[39m contrasena\u001b[33m:\u001b[39m string }) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/usuario/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39musuario)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/contraseña/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39mcontrasena)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/ingresar/i\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                            "column": 14,
+                            "line": 8
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m  6 |\u001b[39m\n \u001b[90m  7 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m login(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m u\u001b[33m:\u001b[39m { usuario\u001b[33m:\u001b[39m string\u001b[33m;\u001b[39m contrasena\u001b[33m:\u001b[39m string }) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/usuario/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39musuario)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/contraseña/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39mcontrasena)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/ingresar/i\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at login (/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:8:14)\u001b[22m\n\u001b[2m    at /Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:55:11\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-20T01:51:15.988Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/114140815/Documents/React Segundo/react-seguro/test-results/acceptance-Criterio-2-—-ru-af69a-sta-NO-accede-a-la-bitácora-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                        "column": 14,
+                        "line": 8
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "6bf654160f377cf56a60-3239784382b6c9348b90",
+              "file": "acceptance.spec.ts",
+              "line": 54,
+              "column": 3
+            },
+            {
+              "title": "[c2] el analista no ve el botón de aprobar",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1085,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n\n    at login (/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:8:14)\n    at /Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:61:11",
+                        "location": {
+                          "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                          "column": 14,
+                          "line": 8
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  6 |\u001b[39m\n \u001b[90m  7 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m login(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m u\u001b[33m:\u001b[39m { usuario\u001b[33m:\u001b[39m string\u001b[33m;\u001b[39m contrasena\u001b[33m:\u001b[39m string }) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/usuario/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39musuario)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/contraseña/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39mcontrasena)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/ingresar/i\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                            "column": 14,
+                            "line": 8
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m  6 |\u001b[39m\n \u001b[90m  7 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m login(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m u\u001b[33m:\u001b[39m { usuario\u001b[33m:\u001b[39m string\u001b[33m;\u001b[39m contrasena\u001b[33m:\u001b[39m string }) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/usuario/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39musuario)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/contraseña/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39mcontrasena)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/ingresar/i\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at login (/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:8:14)\u001b[22m\n\u001b[2m    at /Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:61:11\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-20T01:51:17.390Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/114140815/Documents/React Segundo/react-seguro/test-results/acceptance-Criterio-2-—-ru-fa339-a-no-ve-el-botón-de-aprobar-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                        "column": 14,
+                        "line": 8
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "6bf654160f377cf56a60-ba20db844d9c9b6fe998",
+              "file": "acceptance.spec.ts",
+              "line": 60,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Criterio 4 — buenas prácticas de seguridad",
+          "file": "acceptance.spec.ts",
+          "line": 67,
+          "column": 6,
+          "specs": [
+            {
+              "title": "[c4] IDOR: analista de A no abre solicitud de B (se comporta como inexistente)",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1086,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n\n    at login (/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:8:14)\n    at /Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:69:11",
+                        "location": {
+                          "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                          "column": 14,
+                          "line": 8
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  6 |\u001b[39m\n \u001b[90m  7 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m login(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m u\u001b[33m:\u001b[39m { usuario\u001b[33m:\u001b[39m string\u001b[33m;\u001b[39m contrasena\u001b[33m:\u001b[39m string }) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/usuario/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39musuario)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/contraseña/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39mcontrasena)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/ingresar/i\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                            "column": 14,
+                            "line": 8
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m  6 |\u001b[39m\n \u001b[90m  7 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m login(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m u\u001b[33m:\u001b[39m { usuario\u001b[33m:\u001b[39m string\u001b[33m;\u001b[39m contrasena\u001b[33m:\u001b[39m string }) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/usuario/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39musuario)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/contraseña/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39mcontrasena)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/ingresar/i\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at login (/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:8:14)\u001b[22m\n\u001b[2m    at /Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:69:11\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-20T01:51:18.757Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/114140815/Documents/React Segundo/react-seguro/test-results/acceptance-Criterio-4-—-bu-a5066--comporta-como-inexistente--chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                        "column": 14,
+                        "line": 8
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "6bf654160f377cf56a60-757be0aa3b61404fd669",
+              "file": "acceptance.spec.ts",
+              "line": 68,
+              "column": 3
+            },
+            {
+              "title": "[c4] el listado de un analista no incluye datos de otra sucursal",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1091,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n\n    at login (/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:8:14)\n    at /Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:75:11",
+                        "location": {
+                          "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                          "column": 14,
+                          "line": 8
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  6 |\u001b[39m\n \u001b[90m  7 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m login(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m u\u001b[33m:\u001b[39m { usuario\u001b[33m:\u001b[39m string\u001b[33m;\u001b[39m contrasena\u001b[33m:\u001b[39m string }) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/usuario/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39musuario)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/contraseña/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39mcontrasena)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/ingresar/i\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                            "column": 14,
+                            "line": 8
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m  6 |\u001b[39m\n \u001b[90m  7 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m login(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m u\u001b[33m:\u001b[39m { usuario\u001b[33m:\u001b[39m string\u001b[33m;\u001b[39m contrasena\u001b[33m:\u001b[39m string }) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/usuario/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39musuario)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/contraseña/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39mcontrasena)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/ingresar/i\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at login (/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:8:14)\u001b[22m\n\u001b[2m    at /Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:75:11\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-20T01:51:20.112Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/114140815/Documents/React Segundo/react-seguro/test-results/acceptance-Criterio-4-—-bu-a8d41-luye-datos-de-otra-sucursal-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                        "column": 14,
+                        "line": 8
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "6bf654160f377cf56a60-02c17cd949f480cb4c31",
+              "file": "acceptance.spec.ts",
+              "line": 74,
+              "column": 3
+            },
+            {
+              "title": "[c4] doble control: el aprobador no aprueba su propia solicitud",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Requiere solicitud creada por el propio aprobador en el seed extendido.",
+                      "location": {
+                        "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                        "line": 84,
+                        "column": 10
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 38,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-20T01:51:21.491Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "description": "Requiere solicitud creada por el propio aprobador en el seed extendido.",
+                          "location": {
+                            "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                            "line": 84,
+                            "column": 10
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "6bf654160f377cf56a60-da860ec2301f3fc5dfb5",
+              "file": "acceptance.spec.ts",
+              "line": 80,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Criterio 3 — estados y retroalimentación",
+          "file": "acceptance.spec.ts",
+          "line": 88,
+          "column": 6,
+          "specs": [
+            {
+              "title": "[c3] la página de no autorizado comunica el estado",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1072,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n\n    at login (/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:8:14)\n    at /Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:90:11",
+                        "location": {
+                          "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                          "column": 14,
+                          "line": 8
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  6 |\u001b[39m\n \u001b[90m  7 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m login(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m u\u001b[33m:\u001b[39m { usuario\u001b[33m:\u001b[39m string\u001b[33m;\u001b[39m contrasena\u001b[33m:\u001b[39m string }) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/usuario/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39musuario)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/contraseña/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39mcontrasena)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/ingresar/i\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                            "column": 14,
+                            "line": 8
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m  6 |\u001b[39m\n \u001b[90m  7 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m login(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m u\u001b[33m:\u001b[39m { usuario\u001b[33m:\u001b[39m string\u001b[33m;\u001b[39m contrasena\u001b[33m:\u001b[39m string }) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/usuario/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39musuario)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[35m/contraseña/i\u001b[39m)\u001b[33m.\u001b[39mfill(u\u001b[33m.\u001b[39mcontrasena)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/ingresar/i\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at login (/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:8:14)\u001b[22m\n\u001b[2m    at /Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:90:11\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-20T01:51:21.617Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/114140815/Documents/React Segundo/react-seguro/test-results/acceptance-Criterio-3-—-es-a03be-torizado-comunica-el-estado-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                        "column": 14,
+                        "line": 8
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "6bf654160f377cf56a60-8560c398f8d576db02fd",
+              "file": "acceptance.spec.ts",
+              "line": 89,
+              "column": 3
+            },
+            {
+              "title": "[c3] recorrido con teclado: el formulario de login es navegable",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1092,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n\n    at /Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:99:16",
+                        "location": {
+                          "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                          "column": 16,
+                          "line": 99
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  97 |\u001b[39m\n \u001b[90m  98 |\u001b[39m   test(\u001b[32m'[c3] recorrido con teclado: el formulario de login es navegable'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  99 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 100 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Tab'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 101 |\u001b[39m     \u001b[36mconst\u001b[39m activo \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m document\u001b[33m.\u001b[39mactiveElement\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mtagName\u001b[33m.\u001b[39mtoLowerCase())\u001b[33m;\u001b[39m\n \u001b[90m 102 |\u001b[39m     expect([\u001b[32m'input'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'a'\u001b[39m])\u001b[33m.\u001b[39mtoContain(activo)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                            "column": 16,
+                            "line": 99
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3000/login\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/login\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m  97 |\u001b[39m\n \u001b[90m  98 |\u001b[39m   test(\u001b[32m'[c3] recorrido con teclado: el formulario de login es navegable'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  99 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 100 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mkeyboard\u001b[33m.\u001b[39mpress(\u001b[32m'Tab'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 101 |\u001b[39m     \u001b[36mconst\u001b[39m activo \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m document\u001b[33m.\u001b[39mactiveElement\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mtagName\u001b[33m.\u001b[39mtoLowerCase())\u001b[33m;\u001b[39m\n \u001b[90m 102 |\u001b[39m     expect([\u001b[32m'input'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'a'\u001b[39m])\u001b[33m.\u001b[39mtoContain(activo)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at /Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts:99:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-08-20T01:51:22.881Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/114140815/Documents/React Segundo/react-seguro/test-results/acceptance-Criterio-3-—-es-58d7b-lario-de-login-es-navegable-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/114140815/Documents/React Segundo/react-seguro/grading/acceptance.spec.ts",
+                        "column": 16,
+                        "line": 99
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "6bf654160f377cf56a60-2267b1140bf6799c2ba7",
+              "file": "acceptance.spec.ts",
+              "line": 98,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-20T01:51:08.981Z",
+    "duration": 15119.655999999999,
+    "expected": 0,
+    "skipped": 1,
+    "unexpected": 11,
+    "flaky": 0
+  }
+}
