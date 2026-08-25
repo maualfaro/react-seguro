@@ -1,0 +1,228 @@
+/* [project]/src/app/globals.css [app-client] (css) */
+:root {
+  --fondo: #0f1720;
+  --panel: #17212e;
+  --panel-borde: #24303f;
+  --texto: #e7edf3;
+  --texto-tenue: #9fb0c0;
+  --acento: #3d8bff;
+  --ok: #2fbf71;
+  --alerta: #e0b341;
+  --peligro: #e5484d;
+  --radio: 10px;
+  --esp: 1rem;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  --lightningcss-light: ;
+  --lightningcss-dark: initial;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--fondo);
+  color: var(--texto);
+  margin: 0;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--acento);
+}
+
+:focus-visible {
+  outline: 3px solid var(--acento);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 960px;
+  padding: var(--esp);
+  margin: 0 auto;
+}
+
+.barra {
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--esp);
+  padding: var(--esp);
+  border-bottom: 1px solid var(--panel-borde);
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.barra .marca {
+  letter-spacing: .02em;
+  font-weight: 700;
+}
+
+.barra .rol {
+  color: var(--texto-tenue);
+  font-size: .85rem;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--panel-borde);
+  border-radius: var(--radio);
+  padding: var(--esp);
+  margin-bottom: var(--esp);
+}
+
+.grilla {
+  gap: var(--esp);
+  grid-template-columns: 1fr;
+  display: grid;
+}
+
+@media (min-width: 640px) {
+  .grilla {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .grilla {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.etiqueta {
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--texto-tenue);
+  font-size: .75rem;
+}
+
+.monto {
+  font-variant-numeric: tabular-nums;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.cuenta {
+  color: var(--texto-tenue);
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+}
+
+.chip {
+  border-radius: 999px;
+  padding: .15rem .6rem;
+  font-size: .75rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.chip.PENDIENTE {
+  color: var(--alerta);
+  background: #e0b34126;
+}
+
+.chip.APROBADA {
+  color: var(--ok);
+  background: #2fbf7126;
+}
+
+.chip.RECHAZADA {
+  color: var(--peligro);
+  background: #e5484d26;
+}
+
+.campo {
+  margin-bottom: var(--esp);
+  flex-direction: column;
+  gap: .35rem;
+  display: flex;
+}
+
+.campo label {
+  font-weight: 600;
+}
+
+.campo input, .campo select, .campo textarea {
+  background: var(--fondo);
+  color: var(--texto);
+  border: 1px solid var(--panel-borde);
+  font: inherit;
+  border-radius: 8px;
+  width: 100%;
+  padding: .6rem .7rem;
+}
+
+.campo input[aria-invalid="true"], .campo textarea[aria-invalid="true"] {
+  border-color: var(--peligro);
+}
+
+.error {
+  color: var(--peligro);
+  font-size: .85rem;
+}
+
+.btn {
+  background: var(--acento);
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: .4rem;
+  min-height: 44px;
+  padding: .6rem 1rem;
+  font-weight: 600;
+  display: inline-flex;
+}
+
+.btn.secundario {
+  border: 1px solid var(--panel-borde);
+  color: var(--texto);
+  background: none;
+}
+
+.btn.peligro {
+  background: var(--peligro);
+}
+
+.btn:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.fila-acciones {
+  flex-wrap: wrap;
+  gap: .5rem;
+  display: flex;
+}
+
+.estado {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.estado h1 {
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+}
+
+.estado p {
+  color: var(--texto-tenue);
+  max-width: 42ch;
+  margin: 0 auto 1.2rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/*# sourceMappingURL=src_app_globals_162hn9o.css.map*/

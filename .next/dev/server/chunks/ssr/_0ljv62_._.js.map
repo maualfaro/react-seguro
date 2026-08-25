@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/114140815/Documents/React%20Segundo/react-seguro/node_modules/next/src/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.ts"],"sourcesContent":["module.exports = (\n  require('../../module.compiled') as typeof import('../../module.compiled')\n).vendored['react-ssr']!.ReactJsxDevRuntime\n"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":"AAAAA,OAAOC,OAAO,GACZC,QAAQ,4HACRC,QAAQ,CAAC,YAAY,CAAEC,kBAAkB","ignoreList":[0]}},
+    {"offset": {"line": 9, "column": 0}, "map": {"version":3,"sources":["file:///Users/114140815/Documents/React%20Segundo/react-seguro/src/app/error.tsx"],"sourcesContent":["'use client';\n\nexport default function Error({ reset }: { error: Error & { digest?: string }; reset: () => void }) {\n  return (\n    <div className=\"contenedor estado\" role=\"alert\">\n      <h1>No pudimos completar la operación</h1>\n      <p>Intente de nuevo. Si el problema persiste, comuníquese con soporte e indique la hora exacta.</p>\n      <button className=\"btn\" onClick={reset}>Reintentar</button>\n    </div>\n  );\n}\n"],"names":["Error","reset","className","role","onClick"],"mappings":";;;;;AAAA;;AAEe,SAASA,MAAM,EAAEC,KAAK,EAA6D;IAChG,qBACE,8OAAC;QAAIC,WAAU;QAAoBC,MAAK;;0BACtC,8OAAC;0BAAG;;;;;;0BACJ,8OAAC;0BAAE;;;;;;0BACH,8OAAC;gBAAOD,WAAU;gBAAME,SAASH;0BAAO;;;;;;;;;;;;AAG9C"}}]
+}
