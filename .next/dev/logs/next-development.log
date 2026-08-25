@@ -1,2 +1,9 @@
-{"timestamp":"00:00:00.545","source":"Server","level":"LOG","message":""}
-{"timestamp":"00:00:05.032","source":"Server","level":"ERROR","message":"⨯ Error: SESSION_SECRET no configurado"}
+{"timestamp":"00:00:00.732","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:22:08.064","source":"Browser","level":"ERROR","message":"TypeError: Cannot write to a CLOSED writable stream"}
+{"timestamp":"00:22:08.066","source":"Server","level":"ERROR","message":"[browser] \"\\u001b[31mTypeError: Cannot write to a CLOSED writable stream\\u001b[39m\""}
+{"timestamp":"00:22:08.066","source":"Browser","level":"ERROR","message":"TypeError: Cannot write to a CLOSED writable stream"}
+{"timestamp":"00:22:08.066","source":"Server","level":"ERROR","message":"[browser] \"\\u001b[31mTypeError: Cannot write to a CLOSED writable stream\\u001b[39m\""}
+{"timestamp":"00:22:08.066","source":"Browser","level":"ERROR","message":"TypeError: Cannot write to a CLOSED writable stream"}
+{"timestamp":"00:22:08.066","source":"Server","level":"ERROR","message":"[browser] \"\\u001b[31mTypeError: Cannot write to a CLOSED writable stream\\u001b[39m\""}
+{"timestamp":"00:22:08.067","source":"Browser","level":"ERROR","message":"TypeError: Cannot close a CLOSED writable stream"}
+{"timestamp":"00:22:08.067","source":"Server","level":"ERROR","message":"[browser] \"\\u001b[31mTypeError: Cannot close a CLOSED writable stream\\u001b[39m\""}

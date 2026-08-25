@@ -1,5 +1,43 @@
 {
   "node": {
+    "00097d74ecec5e70abcd4230c1230651e3bce05c9d": {
+      "workers": {
+        "app/solicitudes/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/solicitudes/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/logout/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/solicitudes/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "codeHash": null
+        },
+        "app/solicitudes/page": {
+          "moduleId": "[project]/.next-internal/server/app/solicitudes/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/logout/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/solicitudes/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/logout/actions.ts",
+      "exportedName": "cerrarSesion"
+    },
+    "40207813f562fbd5d7bb77dd35e5ab28bc2597a381": {
+      "workers": {
+        "app/solicitudes/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/solicitudes/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/logout/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/solicitudes/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/solicitudes/actions.ts",
+      "exportedName": "rechazarSolicitud"
+    },
+    "40708aa024dc6fd2db10c656062353bad2d0090356": {
+      "workers": {
+        "app/solicitudes/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/solicitudes/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/logout/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/solicitudes/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/solicitudes/actions.ts",
+      "exportedName": "aprobarSolicitud"
+    },
     "60e2929d195ce42f8c55c133c366bb1d364a5b5801": {
       "workers": {
         "app/login/page": {
@@ -10,6 +48,17 @@
       },
       "filename": "src/app/login/actions.ts",
       "exportedName": "iniciarSesion"
+    },
+    "40c2ff22b96bd979e3c3cacb778605939852b5beeb": {
+      "workers": {
+        "app/solicitudes/page": {
+          "moduleId": "[project]/.next-internal/server/app/solicitudes/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/logout/actions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/solicitudes/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "codeHash": null
+        }
+      },
+      "filename": "src/app/solicitudes/actions.ts",
+      "exportedName": "crearSolicitud"
     }
   },
   "edge": {},
